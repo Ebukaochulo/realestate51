@@ -1,0 +1,165 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+  <main id="main">
+
+    <!-- ======= Intro Single ======= -->
+    <section class="intro-single">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-8">
+            <div class="title-single-box">
+              <h1 class="title-single">We try our best to give you the home you desire</h1>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  About
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Intro Single-->
+
+    <!-- ======= About Section ======= -->
+    <section class="section-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 position-relative">
+            <div class="about-img-box">
+              <img src="{% static 'assets/img/slide-about-1.jpg' %}" alt="" class="img-fluid">
+            </div>
+            <div class="sinse-box">
+              <h3 class="sinse-title"> Ochulo's EstateAgency
+                <span></span>
+                <br> Since 2021
+              </h3>
+              <p>Art & Creative</p>
+            </div>
+          </div>
+          <div class="col-md-12 section-t8 position-relative">
+            <div class="row">
+              <div class="col-md-6 col-lg-5">
+                <img src="{% static 'assets/img/about-2.jpg' %}" alt="" class="img-fluid">
+              </div>
+              <div class="col-lg-2  d-none d-lg-block position-relative">
+                <div class="title-vertical d-flex justify-content-start">
+                  <span>EstateAgency Exclusive Property</span>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-5 section-md-t3">
+                <div class="title-box-d">
+                  <h3 class="title-d">What
+                    <span class="color-d">do we</span> do ?
+                    
+                  </h3>
+                </div>
+                <p class="color-text-a">
+                  Ochulo's EstateAgency is one of the best in the world.
+                  We sell and rent the best houses in the country and also provide give you the best properties at
+                  an affordable price.
+                </p>
+                <p class="color-text-a">
+                  We also help you with moving your properties into your new house and we work
+                   hand in hand with the construction companies, we also have 
+                  lawyers to help reduce all the paper work, that's why we're one of the best
+                </p>
+                <p class="color-text-a">
+                 You can choose from a variety of houses, from office buildings to an Ideal home we have it all and we have 
+                 got you covered.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- ======= Services Section ======= -->
+   <section class="section-services section-t8">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-wrap d-flex justify-content-between">
+            <div class="title-box">
+              <h2 class="title-a">Our Services</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card-box-c foo">
+            <div class="card-header-c d-flex">
+              <div class="card-box-ico">
+                <span class="bi bi-cart"></span>
+              </div>
+              <div class="card-title-c align-self-center">
+                <h2 class="title-c">Lifestyle</h2>
+              </div>
+            </div>
+            <div class="card-body-c">
+              <p class="content-c">
+                we work hard to meet the expectations of our customers, with the best staffs to make a good impression on the customers
+                .
+              </p>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-c foo">
+            <div class="card-header-c d-flex">
+              <div class="card-box-ico">
+                <span class="bi bi-calendar4-week"></span>
+              </div>
+              <div class="card-title-c align-self-center">
+                <h2 class="title-c">Morgage</h2>
+              </div>
+            </div>
+            <div class="card-body-c">
+              <p class="content-c">
+                Our properties are one of the best at an affordable price but we allow our customers to pay gradually for a property 
+                that they could not pay completely at a time. But the documents of Ownership will be in our possession for until the 
+                morgage is paid 
+              </p>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-box-c foo">
+            <div class="card-header-c d-flex">
+              <div class="card-box-ico">
+                <span class="bi bi-card-checklist"></span>
+              </div>
+              <div class="card-title-c align-self-center">
+                <h2 class="title-c">Sell</h2>
+              </div>
+            </div>
+            <div class="card-body-c">
+              <p class="content-c">
+               we sell and rent out all kinds of real estate at a relatively affordable price we also can help you
+               sell your property or real estate to a potential buyer so that there will be no need to be stressed out because we got you covered
+              </p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Services Section -->
+    
+
+  </main>
+  {% endblock %}
