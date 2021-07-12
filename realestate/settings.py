@@ -82,10 +82,13 @@ WSGI_APPLICATION = 'realestate.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'd395a3cmtc4jtk',
+        'HOST' : 'ec2-54-157-100-65.compute-1.amazonaws.com',
+        'PORT' : 5432,
+        'USER' : 'jipjkzqsqvkecr',
+        'PASSWORD' : '02f897db3b35b3f72648e33e89ccd2fe54640ff14fc27283bd42ff9b4ed30694',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
