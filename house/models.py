@@ -18,7 +18,6 @@ class House(models.Model):
     image_2 = models.ImageField(upload_to = 'picture/', null=True, blank = True)
     image_3 = models.ImageField(upload_to = 'picture/', null=True, blank = True)
     video   = models.FileField(upload_to='video/', null=True, blank=True)
-    floor_plan = models.ImageField(upload_to='floorplan/', null=True, blank=True)
     area = models.CharField(max_length=100, blank=True, null=True)
     def __str__(self):
         return self.name
