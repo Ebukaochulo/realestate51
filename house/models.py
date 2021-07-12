@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class House(models.Model):
+class Housee(models.Model):
     name = models.CharField(max_length=300)
     price = models.FloatField(default=0)
     description = models.TextField()
@@ -21,7 +21,7 @@ class House(models.Model):
         return self.name
 
 class Amenities(models.Model):
-    house = models.ForeignKey(House, on_delete= models.CASCADE) 
+    house = models.ForeignKey(Housee, on_delete= models.CASCADE) 
     amenity = models.CharField(max_length=300)
     def __str__(self):
         return f'amenities of {self.house.name}'
