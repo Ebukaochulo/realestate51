@@ -20,14 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
+import os
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-gvpupoezym0x&$^m&4=kop_$fhp$r%+ice^a^6bm9-@#_30rf)'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-gvpupoezym0x&$^m&4=kop_$fhp$r%+ice^a^6bm9-@#_30rf')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG','')=='True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['still-wave-41752.herokuapp.com']
 
 
 # Application definition
@@ -78,17 +78,20 @@ WSGI_APPLICATION = 'realestate.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-DATABASES = {
+if os.environ.get('DATABASE_URL'):   
+    DATABASES = {
+    'default': dj_database_url.config(conn_max_age=500)
+    }                                              
+else:
+    DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'd395a3cmtc4jtk',
-        'HOST' : 'ec2-54-157-100-65.compute-1.amazonaws.com',
-        'PORT' : 5432,
-        'USER' : 'jipjkzqsqvkecr',
-        'PASSWORD' : '02f897db3b35b3f72648e33e89ccd2fe54640ff14fc27283bd42ff9b4ed30694',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
+    }
+
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -127,13 +130,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 import os
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'Whitenoise.storage.CommpressedManifestStaticFilesStorage'
+MEDIA_ROOT = 'media'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-django_heroku.settings(locals())
+
