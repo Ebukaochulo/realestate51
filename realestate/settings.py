@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
-import dj_database_url
-from decouple import config
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,6 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 import os
+import dj_database_url
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-gvpupoezym0x&$^m&4=kop_$fhp$r%+ice^a^6bm9-@#_30rf')
 
@@ -75,7 +76,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'realestate.wsgi.application'
 
-
+import dj_database_url
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 if os.environ.get('DATABASE_URL'):   
