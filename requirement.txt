@@ -13,3 +13,4 @@ whitenoise==5.2.0
 autopep8==1.5.7
 toml==0.10.2
 pycodestyle==2.7.0
+django-js-asset==1.2.2
